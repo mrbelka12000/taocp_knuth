@@ -31,8 +31,9 @@ func TestAlgo(t *testing.T) {
 		got := Algo(test.m, test.n)
 		if got != test.expected {
 			t.Errorf("test %v failed got = %v, expected = %v  \n", i, got, test.expected)
-			t.Fail()
 		}
 	}
-	t.Log("all tests passed")
+	if !t.Failed() {
+		t.Log("all tests passed")
+	}
 }
