@@ -28,7 +28,7 @@ func TestAlgo(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		got := Algo(test.m, test.n)
+		got := AlgorithmE(test.m, test.n)
 		if got != test.expected {
 			t.Errorf("test %v failed got = %v, expected = %v  \n", i, got, test.expected)
 		}
